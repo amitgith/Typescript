@@ -1,10 +1,10 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import {} from "module";
+import { useEffect, useState } from "react";
 import ProductCard from "./components/ProductCard";
+import type { Product } from "./types";
 
-const App = (props: Props) => {
-  const [productsData, setProductsData] = useState([]);
+const App = () => {
+  const [productsData, setProductsData] = useState<Product[]>([]);
   let getData = async () => {
     let res = await axios.get("https://fakestoreapi.com/products");
     console.log(res.data);
